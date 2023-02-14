@@ -1,4 +1,10 @@
-import {View, Text, useColorScheme} from 'react-native';
+import {
+  View,
+  Text,
+  useColorScheme,
+  Button,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import {
   SafeAreaView,
@@ -23,7 +29,10 @@ const Home = (): JSX.Element => {
     <SafeAreaView style={styles.container}>
       <ImageBackground source={backgroundImage} style={styles.image}>
         <StatusBar barStyle={'dark-content'} />
-        <Text style={styles.text}>Hi, there!</Text>
+        <Text style={styles.text}>Welcome!</Text>
+        <TouchableOpacity>
+          <Text style={styles.button}>Register now!</Text>
+        </TouchableOpacity>
       </ImageBackground>
     </SafeAreaView>
   );
@@ -49,10 +58,22 @@ const styles = StyleSheet.create({
   text: {
     color: 'white',
     fontFamily: 'arial',
-    fontSize: 32,
-    lineHeight: 64,
+    fontSize: 24,
+    lineHeight: 32,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginTop: 150,
+  },
+  button: {
+    color: 'white',
+    fontFamily: 'arial',
+    fontSize: 24,
+    lineHeight: 32,
     fontWeight: 'bold',
     textAlign: 'center',
     marginTop: 50,
+    backgroundColor: 'black',
+    padding: 10,
+    borderRadius: 10,
   },
 });
